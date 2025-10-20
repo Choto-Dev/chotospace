@@ -1,0 +1,23 @@
+{
+  "name": "chotospace",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "clean-up": "node ./scripts/clean-up.mjs",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@chotospace/typescript-config": "workspace:*",
+    "turbo": "2.5.6",
+    "typescript": "catalog:",
+    "ultracite": "5.2.5"
+  },
+  "packageManager": "pnpm@10.12.4",
+  "engines": {
+    "node": ">=20"
+  }
+}

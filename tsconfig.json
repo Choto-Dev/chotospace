@@ -1,0 +1,3 @@
+{
+  "extends": "@chotospace/typescript-config/base"
+}
