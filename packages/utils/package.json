@@ -5,9 +5,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "pnpm gen:template && unbuild",
+    "build": "unbuild",
     "check-types": "tsc --noEmit",
-    "gen:template": "tsx ./scripts/generate-tempate-types.ts",
     "lint": "biome check --write ."
   },
   "devDependencies": {
@@ -19,6 +18,7 @@
   },
   "dependencies": {
     "effect": "^3.18.4",
+    "env-paths": "^3.0.0",
     "giget": "2.0.0",
     "yaml": "2.8.1",
     "zod": "4.1.11"
@@ -26,11 +26,21 @@
   "exports": {
     ".": {
       "default": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
     "./zod": {
       "default": "./dist/lib/zod.mjs",
+      "import": "./dist/lib/zod.mjs",
+      "require": "./dist/lib/zod.cjs",
       "types": "./dist/lib/zod.d.ts"
+    },
+    "./effect": {
+      "default": "./dist/lib/effect.mjs",
+      "import": "./dist/lib/effect.mjs",
+      "require": "./dist/lib/effect.cjs",
+      "types": "./dist/lib/effect.d.ts"
     }
   }
 }

@@ -1,1 +1,1 @@
-export * from "./utils/index";
+export * from "./utils/is-space-config-exists";
